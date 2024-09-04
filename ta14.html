@@ -1,0 +1,21 @@
+<!DOCTYPE html><html>
+    <head>
+    </head>
+    <body>
+        <ul id="lista">   </ul>
+        <input id="TextoIngresado" type="text" placeholder="Aniadir elemento a la lista" />
+        <button id="Añadido">Confirmar</button>
+        <script>
+            const boton = document.getElementById("Añadido");
+            const input = document.getElementById("TextoIngresado");
+
+            boton.addEventListener("click", () => {
+                const inputText = input.value.trim();
+                const lista = document.getElementById("lista");
+                const li = document.createElement('li');
+                li.textContent = inputText;
+                lista.appendChild(li);
+            })
+        </script>
+    </body>
+</html>
